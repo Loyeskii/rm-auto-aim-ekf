@@ -159,6 +159,8 @@ set RM_TRACK_DEBUG=1
 
 视频与模型体积较大，`*.avi` / `*.mp4` 已在 `.gitignore` 中排除。
 
+**输入视频不在仓库里**（64 MB）。跑之前把 `2026-05-20_23-57-31.avi` 放到 `data/original/` 下即可，程序按 `config_video.yaml` 的 `io.video` 读取这个路径。`IMU.txt` 和 `重投影误差.txt` 体积小，随仓库一起走，不需要另外准备。
+
 ---
 
 ## 设计要点速查
