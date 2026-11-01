@@ -1,0 +1,44 @@
+# ── 构建产物 ──────────────────────────────
+build/
+cmake-build-*/
+.vs/
+CMakeUserPresets.json
+CMakeSettings.json
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.o
+
+# ── 视频：输入 64 MB、输出 43 MB，都不入库 ──────────
+# 输入视频：data/original/2026-05-20_23-57-31.avi
+# 输出视频：data/processed/output.mp4
+*.avi
+*.mp4
+
+# ── 运行产物 ──────────────────────────────
+# 检测结果、状态曲线、导出的 CSV/PNG 都属于产物，换机器重跑即可再生
+data/processed/
+
+# ── 保留的小体积素材（不要忽略）──────────────
+# data/original/IMU.txt          48 KB，531 帧姿态四元数
+# data/original/重投影误差.txt     252 B，相机内参与畸变
+# 这两个文件是报告引用的输入，体积小，随仓库一起走
+
+# ── 模型权重 ──────────────────────────────
+# models/*.onnx 体积 6~13 MB，运行必需且来源固定，保持入库；
+# 若日后嫌仓库偏大，可改为在此忽略、并在 README 写明下载地址
+
+# ── 会话工具目录（与代码无关）──────────────
+.workbuddy/
+
+# ── 编辑器 / 系统 ─────────────────────────
+.vscode/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+desktop.ini
